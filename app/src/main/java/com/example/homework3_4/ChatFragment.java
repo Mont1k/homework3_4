@@ -38,10 +38,10 @@ public class ChatFragment extends Fragment {
 
     public void addUserMessage(String message) {
         if (message != null && !message.isEmpty()) {
-            messages.add(new Message(message, true)); // Добавляем сообщение от пользователя
-            messages.add(new Message("Автоответ: " + message, false)); // Добавляем автоответ
-            adapter.notifyItemRangeInserted(messages.size() - 2, 2); // Сообщаем адаптеру о добавлении
-            recyclerView.scrollToPosition(messages.size() - 1); // Прокручиваем к последнему сообщению
+            messages.add(new Message(message, true));
+            messages.add(new Message("Автоответ: " + message, false));
+            adapter.notifyItemRangeInserted(messages.size() - 2, 2);
+            recyclerView.scrollToPosition(messages.size() - 1);
         }
     }
 }

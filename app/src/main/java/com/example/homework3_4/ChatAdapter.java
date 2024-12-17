@@ -31,13 +31,12 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
         Message message = messages.get(position);
         holder.textView.setText(message.getText());
 
-        // Установка фона в зависимости от отправителя
         if (message.isUser()) {
             holder.textView.setBackgroundResource(R.drawable.bg_user_message);
-            holder.textView.setTextColor(Color.WHITE); // Белый текст
+            holder.textView.setTextColor(Color.WHITE);
         } else {
             holder.textView.setBackgroundResource(R.drawable.bg_bot_message);
-            holder.textView.setTextColor(Color.BLACK); // Чёрный текст
+            holder.textView.setTextColor(Color.BLACK);
         }
     }
 
